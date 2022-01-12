@@ -28,16 +28,16 @@ const nuevoModulo = 21 % 5 === 1;
 // No cambies los nombres de las funciones.
 
 function devolverString(str) {
-  var str = 'hola mundo';
+
   return str;
   // "Return" la string provista: str
   // Tu código:
   
 }
 
-function suma(2, 5) {
-  var suma = 2 + 5;
-  return suma;
+function suma(x, y) {
+  
+  return x + y;
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
@@ -68,15 +68,14 @@ function divide(x, y) {
   
 }
 
-function sonIguales(x, y) {
-  if (x===y) {
-    return true;
-    } else {return false;}
-
-  }
+function sonIguales(x,y) {
+  
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
+ if (x === y) { return true;
+} else { return false;}
+  
   
 }
 
@@ -114,8 +113,7 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  var x =100, y = 3;
-  console.log(x%y);
+return x % y;
 
 
   
@@ -194,17 +192,15 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero > 0) {
-    return 	[['el numero es positivo']];
-}
-    if (numero < 0) {
-    	return [['el numero es negativo']];
-    }
-    	if else { 
-    		return false;
-    		}
-    
-  
+  if(numero === 0) {
+    return false;
+  }
+  else if(numero > 0) {
+    return "Es positivo";
+  }
+  else {
+    return "Es negativo";
+  }
 }
 
 function agregarSimboloExclamacion(str) {
@@ -212,7 +208,7 @@ function agregarSimboloExclamacion(str) {
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
   var str = 'hello world';
-  alert( str + '!')
+ return str + '!'
 
 }
 
@@ -220,7 +216,8 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  console.log( nombre + ' ' + apellido );
+  var nombreCompleto = nombre + ' ' + apellido;
+  return nombreCompleto;
 
   
 }
@@ -229,8 +226,8 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  console.log( 'hola ' + nombre);
-  obtenerSaludo(agustin);
+  console.log( 'hola ' + nombre + '!');
+
   
 }
 
@@ -246,7 +243,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  perimetro = lado*lado
+  perimetro = lado*4
   return perimetro
   
 }
@@ -266,7 +263,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  dolar = euro*1.2
+ return euro*1.2
 
   
 }
@@ -277,14 +274,12 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
-  //Escribe tu código aquí
-  if (letra === ( "a"||"b"||"c"||"d"||"e")) {
-    return 'es una vocal';}
-    return 'no es una vocal';
-  
-  }
-  
-}
+  //Escribe tu código aquí:
+    if (letra.length > 1) {
+       return "dato incorrecto";
+     } if (letra ==  "a"|| letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+     return "es una vocal";}
+     return "no es una vocal";}
 
 
 
